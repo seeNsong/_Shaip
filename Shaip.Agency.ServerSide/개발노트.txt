@@ -1,0 +1,40 @@
+﻿
+1-1. Blazor Web App Server Template + Identity
+1-2. key vault 연결 (비밀관리)
+    1-2-1. 연결된서비스(connected service)
+    1-2-2. program.cs 수정 
+        https://docs.microsoft.com/ko-kr/azure/key-vault/general/vs-key-vault-add-connected-service
+    1-2-3. azure 게시
+    1-2-4. app service ID 생성 (시스템할당 관리ID)
+    1-2-5. auzre keyvault access 정책 수정 
+
+
+2. DevExpress Nuget 설치 
+	2-1. Package Source 추가 
+		사이트 : https://nuget.devexpress.com/#feed-url
+		Feed URL : https://nuget.devexpress.com/iPOtvrsoyX3TmU5ZYo9XxG44h8W6eJzJjymtihV47zPZb89JOG/api
+	2-2. Nuget Install : DevExpress.Blazor 19.2.4
+
+
+3. Side Bar skin 변경
+	3-1. MainLayout 추가
+        3-1-1.
+		    <div class="sidebar @NavMenuCssClass">
+                <DxScrollView>
+                    <div>
+                        <NavMenu />
+                    </div>
+                </DxScrollView>
+                <div class="footer">
+                    <div class="info-wrapper">
+                        <div class="version">Version: 19.2.4</div>
+                        <div class="copyright">
+                            <span>Copyright &copy; 2006-</span><span>@(DateTime.Now.Year.ToString())</span>
+                            Developer Express Inc
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        3-1-2.
+            DxScrollView 추가
